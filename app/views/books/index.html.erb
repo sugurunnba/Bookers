@@ -30,13 +30,13 @@
   <h4>Title</h4>
   <%= f.text_field :title %>
   <% if @book.errors.include?(:title) %>
-    <p style="color: red;"><%= @book.errors.full_messages_for(:title).first %></p>
+    <p style="color: red;">【error】<%= @book.errors.full_messages_for(:title).first %></p>
   <% end %>
 
   <h4>Body</h4>
   <%= f.text_area :body %>
   <% if @book.errors.include?(:body) %>
-    <p style="color: red;"><%= @book.errors.full_messages_for(:body).first %></p>
+    <p style="color: red;">【error】<%= @book.errors.full_messages_for(:body).first %></p>
   <% end %>
 
   <%= f.submit "Create Book" %>
